@@ -50,16 +50,21 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`
-        lg:hidden absolute top-full left-0 w-full bg-[#5e7627] border-t border-black/10 transition-all duration-300 ease-in-out
-        ${isMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}
-      `}>
-        <ul className="flex flex-col items-center gap-6 py-8 text-white font-medium shadow-xl">
-          <li className="cursor-pointer hover:text-gray-200" onClick={() => setIsMenuOpen(false)}>Home</li>
-          <li className="cursor-pointer hover:text-gray-200" onClick={() => setIsMenuOpen(false)}>About us</li>
-          <li className="cursor-pointer hover:text-gray-200" onClick={() => setIsMenuOpen(false)}>Contact us</li>
-        </ul>
-      </div>
+ {/* Mobile Menu Overlay */}
+<div className={`
+  lg:hidden w-full bg-[#5e7627] border-t border-black/10 transition-all duration-300 ease-in-out
+  /* 1. Removed 'absolute'
+     2. Changed 'top-full left-0' to 'overflow-hidden' 
+     3. Controlled height to shift content
+  */
+  ${isMenuOpen ? "max-h-125 opacity-100 visible" : "max-h-0 opacity-0 invisible"}
+`}>
+  <ul className="flex flex-col items-center gap-6 py-8 text-white font-medium shadow-xl">
+    <li className="cursor-pointer hover:text-gray-200" onClick={() => setIsMenuOpen(false)}>Home</li>
+    <li className="cursor-pointer hover:text-gray-200" onClick={() => setIsMenuOpen(false)}>About us</li>
+    <li className="cursor-pointer hover:text-gray-200" onClick={() => setIsMenuOpen(false)}>Contact us</li>
+  </ul>
+</div>
     </nav>
   );
 };

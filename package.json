@@ -1,0 +1,29 @@
+{
+  "name": "whizzy",
+  "version": "1.0.0",
+  "description": "About cleaning and beauty product",
+  "keywords": [
+    "felia",
+    "whizzy",
+    "clean",
+    "beauty"
+  ],
+  "license": "ISC",
+  "author": "Nikhil",
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.3"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router": "^7.12.0",
+    "tailwindcss": "^4.1.18"
+  }
+}

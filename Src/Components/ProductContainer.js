@@ -3,7 +3,7 @@ import ProductList from "./ProductList";
 
 
 
-const productDetails=[
+export const productDetails=[
 
 
   {
@@ -65,7 +65,25 @@ const productDetails=[
       "Cleans oil stains perfectly from the puja area.",
       "Safe on white marble walls; didn't leave any yellowing."
     ]
-  }
+  },
+
+{
+  id: "B0GGJHM1ZB",
+  name: "Whizzy Clean Brass & Copper Cleaning Liquid",
+  price: "₹200",
+  description:
+    "Whizzy Clean Brass & Copper Cleaning Liquid is specially formulated to restore shine and remove tarnish, oxidation, and dark stains from brass and copper utensils. Its gentle yet effective formula cleans deeply without scratching surfaces, making it safe for daily household use.",
+  image_url:
+    "https://res.cloudinary.com/ds7rnlyst/image/upload/v1768981599/Gemini_Generated_Image_t94x93t94x93t94x-removebg-preview_ymyvbi.png",
+  rating: 4.5,
+  comments: [
+    "Brings back shine to old copper utensils.",
+    "Works better than traditional cleaning powders.",
+    "Very easy to use and gives instant results."
+  ]
+}
+
+  
 ]
 
 
@@ -75,7 +93,7 @@ const ProductContainer=()=>{
 
 return(
     <section className="px-8 md:px-20 py-16 bg-gray-50">
-      <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+      <h2 id="products" className="text-3xl font-bold text-center mb-12 text-gray-800">
         Our Products
       </h2>
 

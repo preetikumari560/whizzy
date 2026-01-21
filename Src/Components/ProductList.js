@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router";
+
 const ProductList = ({ data }) => {
   return (
     /* Added 'group' class here so the child image can respond to this container's hover state */
@@ -27,14 +29,14 @@ const ProductList = ({ data }) => {
       <p className="mt-1 text-sm text-gray-500">
         ⭐ {data.rating} / 5
       </p>
-
+<Link to={`/product/${data.id}`}>
       <button
         className="mt-4 px-4 py-2 text-sm rounded-lg
                    bg-[#5e7627] text-white
                    hover:bg-[#4b601f] transition"
       >
         View Details
-      </button>
+      </button></Link>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../index.css";
+import { Link } from "react-router";
 
 const Header = () => {
   // State to handle mobile menu toggle
@@ -27,9 +28,9 @@ const Header = () => {
 
         {/* Desktop Navigation (Visible on lg screens and up) */}
         <ul className="hidden lg:flex gap-10 text-sm font-medium text-white">
-          <li className="cursor-pointer hover:text-gray-200 transition">Home</li>
-          <li className="cursor-pointer hover:text-gray-200 transition">About us</li>
-          <li className="cursor-pointer hover:text-gray-200 transition">Contact us</li>
+          <Link to={`/`}><li className="cursor-pointer hover:text-gray-200 transition">Home</li></Link>
+          <Link to={'/about'}> <li className="cursor-pointer hover:text-gray-200 transition">About us</li></Link>
+          <Link to={"/contact"}><li className="cursor-pointer hover:text-gray-200 transition">Contact us</li></Link>
         </ul>
 
         {/* Hamburger Button (Visible only on mobile/tablet) */}
@@ -60,9 +61,9 @@ const Header = () => {
   ${isMenuOpen ? "max-h-125 opacity-100 visible" : "max-h-0 opacity-0 invisible"}
 `}>
   <ul className="flex flex-col items-center gap-6 py-8 text-white font-medium shadow-xl">
-    <li className="cursor-pointer hover:text-gray-200" onClick={() => setIsMenuOpen(false)}>Home</li>
-    <li className="cursor-pointer hover:text-gray-200" onClick={() => setIsMenuOpen(false)}>About us</li>
-    <li className="cursor-pointer hover:text-gray-200" onClick={() => setIsMenuOpen(false)}>Contact us</li>
+   <Link to={`/`}><li className="cursor-pointer hover:text-gray-200" onClick={() => setIsMenuOpen(false)}>Home</li></Link> 
+   <Link to={'/about'}> <li className="cursor-pointer hover:text-gray-200" onClick={() => setIsMenuOpen(false)}>About us</li></Link>
+   <Link to={"/contact"}><li className="cursor-pointer hover:text-gray-200" onClick={() => setIsMenuOpen(false)}>Contact us</li></Link> 
   </ul>
 </div>
     </nav>

@@ -2,7 +2,7 @@ import React from "react";
 import { useState,useEffect } from "react";
 
 import ProductContainer from "./ProductContainer";
-
+import CustomerReviews from "./CustomerReviews";
 import Intro from "./Intro";
 
 const introData = [
@@ -43,6 +43,8 @@ const [index, setIndex] = useState(0);
 
             
         <ProductContainer/>
+
+        <CustomerReviews />
        </div> 
     )
 }

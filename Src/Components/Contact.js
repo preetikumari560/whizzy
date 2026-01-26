@@ -30,9 +30,9 @@ const Contact = () => {
             </p>
 
             <div className="space-y-4 text-gray-700 font-medium">
-              <p>📞 <span className="ml-2">+919599476080</span></p>
+              <p>📞 <span className="ml-2">+91-9599476080,  +91-8800368448 </span></p>
               <p>📧 <span className="ml-2">corpfelia@gmail.com</span></p>
-              <p>📍 <span className="ml-2">H.N0-970, DDA JANTA FLATS, GRP-3, PKT-C, HASTSAL, NEW DELHI-110059, India</span></p>
+              <p>📍 <span className="ml-2">New Delhi, India</span></p>
             </div>
           </div>
 
@@ -52,8 +52,8 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2
                          bg-white text-[#5e7627]
-                         font-semibold px-6 py-3
-                         rounded-full hover:bg-gray-100 transition"
+                         font-semibold px-6 py-3  shadow-lg shadow-black/45
+                         rounded-full hover:bg-gray-200 transition"
             >
               💬 Chat on WhatsApp
             </a>
@@ -74,11 +74,11 @@ const Contact = () => {
           </p>
 
           <a
-            href="mailto:whizzycare@gmail.com?subject=Product%20Inquiry&body=Hi%20Whizzy,%0A%0AI%20visited%20your%20website%20and%20want%20to%20know%20more%20about%20your%20products.%0A%0AThanks"
+            href="mailto:whizzyclean.care@gmail.com?subject=Product%20Inquiry&body=Hi%20Whizzy,%0A%0AI%20visited%20your%20website%20and%20want%20to%20know%20more%20about%20your%20products.%0A%0AThanks"
             className="inline-flex items-center gap-3
                        bg-[#5e7627] text-white
                        px-8 py-4 rounded-full
-                       shadow-lg hover:bg-[#4b601f]
+                      shadow-lg shadow-black/45 hover:bg-[#4b601f]
                        transition text-lg"
           >
             📧 Email Whizzy

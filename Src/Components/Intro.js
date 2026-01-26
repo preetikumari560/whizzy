@@ -34,7 +34,7 @@ const Intro = ({ title, desc, img }) => {
           {desc}
         </p>
 
-      <a href="#products">  <button className="mt-8 px-6 py-3 bg-[#5e7627] text-white rounded-lg shadow-md hover:bg-[#4b601f] transition">
+      <a href="#products">  <button className="mt-8 px-6 py-3 bg-[#4b601f]  text-white rounded-lg shadow-lg shadow-black/45 hover:bg-[#5e7627] transition">
           Explore Products
         </button></a>
       </div>

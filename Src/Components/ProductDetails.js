@@ -54,14 +54,14 @@ const ProductDetails = ({ products }) => {
           ⭐ {product.rating} / 5
         </p>
 
-        <a
+        {/* <a
           href="https://www.amazon.in"
           target="_blank"
           rel="noreferrer"
           className="inline-block mt-8 bg-[#5e7627] text-white px-6 py-3 rounded-lg hover:bg-[#4b601f] transition"
         >
           Buy on Amazon
-        </a>
+        </a> */}
       </div>
 
     </div>

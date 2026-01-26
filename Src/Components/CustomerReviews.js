@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import { productDetails } from "./ProductContainer";
 
 const CustomerReviews = () => {
+  const scrollRef = useRef(null);
 
   const reviews = productDetails.flatMap(product =>
     product.comments.map(comment => ({
@@ -11,8 +12,19 @@ const CustomerReviews = () => {
     }))
   );
 
+  const scroll = (direction) => {
+    const container = scrollRef.current;
+    const scrollAmount = 320;
+
+    if (direction === "left") {
+      container.scrollLeft -= scrollAmount;
+    } else {
+      container.scrollLeft += scrollAmount;
+    }
+  };
+
   return (
-    <section className="bg-white py-16 px-6 md:px-20">
+    <section className="bg-white py-16 px-6 md:px-20 relative">
 
       {/* Heading */}
       <div className="text-center mb-10">
@@ -24,13 +36,23 @@ const CustomerReviews = () => {
         </p>
       </div>
 
-      {/* Manual scroll container */}
+      {/* Left Arrow (desktop only) */}
+      <button
+        onClick={() => scroll("left")}
+        className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2
+                   bg-white shadow-lg rounded-full w-10 h-10
+                   items-center justify-center text-xl
+                   hover:bg-gray-100"
+      >
+        ‹
+      </button>
+
+      {/* Reviews */}
       <div
+        ref={scrollRef}
         className="
           flex gap-6 overflow-x-auto
-          scrollbar-hide
-          scroll-smooth
-          pb-4
+          scrollbar-hide scroll-smooth pb-4
         "
       >
         {reviews.map((review, index) => (
@@ -40,12 +62,9 @@ const CustomerReviews = () => {
               min-w-70
               md:min-w-[320px]
               bg-[#f0f0f0]
-              rounded-xl
-              p-6
-              shadow-md
-              hover:shadow-xl
-              transition
-              shrink-0
+              rounded-xl p-6
+              shadow-md hover:shadow-xl
+              transition shrink-0
             "
           >
             <h4 className="font-semibold text-gray-800 mb-1">
@@ -62,6 +81,18 @@ const CustomerReviews = () => {
           </div>
         ))}
       </div>
+
+      {/* Right Arrow (desktop only) */}
+      <button
+        onClick={() => scroll("right")}
+        className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2
+                   bg-white shadow-lg rounded-full w-10 h-10
+                   items-center justify-center text-xl
+                   hover:bg-gray-100"
+      >
+        ›
+      </button>
+
     </section>
   );
 };

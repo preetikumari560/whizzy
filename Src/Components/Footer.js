@@ -18,9 +18,9 @@ const Footer = () => {
 
         {/* Contact – compact */}
         <div className="text-center md:text-right text-sm text-white/90 space-y-1">
-          <p>📞 +91-9599476080</p>
+        
           <p>📞 +91-8800368448</p>
-          <p>📧 corpfelia@gmail.com</p>
+          <p>📧 whizzyclean.care@gmail.com</p>
           <p>📍 New Delhi, India</p>
         </div>
 

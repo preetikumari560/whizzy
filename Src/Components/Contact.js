@@ -22,6 +22,7 @@ const Contact = () => {
           <div className="bg-white rounded-2xl shadow-md p-8">
             <h3 className="text-2xl font-semibold text-[#5e7627] mb-4">
               Get in Touch
+             
             </h3>
 
             <p className="text-gray-700 mb-6 leading-relaxed">
@@ -30,9 +31,13 @@ const Contact = () => {
             </p>
 
             <div className="space-y-4 text-gray-700 font-medium">
-              <p>📞 <span className="ml-2">+91-9599476080,  +91-8800368448 </span></p>
+              <p>📞 <span className="ml-2">+91-8800368448 </span></p>
               <p>📧 <span className="ml-2">corpfelia@gmail.com</span></p>
               <p>📍 <span className="ml-2">New Delhi, India</span></p>
+
+              <p className="bg-[#f0f4ea] px-4 py-3 rounded-xl text-[#5e7627] font-semibold">
+                Customer Support : whizzyclean.care@gmail.com
+              </p>
             </div>
           </div>
 
@@ -47,7 +52,7 @@ const Contact = () => {
             </p>
 
             <a
-              href="https://wa.me/919599476080?text=Hi%20I%20visited%20your%20Whizzy%20website"
+              href="https://wa.me/8800368448?text=Hi%20I%20visited%20your%20Whizzy%20website"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2

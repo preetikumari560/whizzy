@@ -13,14 +13,22 @@ const Header = () => {
         
         {/* Logo Section */}
         {/* Added overflow-visible to the parent and adjusted translate for mobile */}
-<div className="relative z-50 left-3 bottom-0 translate-y-1/4 transition-all duration-300">
+{/* <div className="relative z-50 left-3 bottom-0 translate-y-1/4 transition-all duration-300">
   <img 
     className="w-20 md:w-32" // Slightly smaller logo for mobile so it fits the bar
     src="https://res.cloudinary.com/ds7rnlyst/image/upload/v1767833279/whizzyLogo-removebg-preview_ag3pgr.png" 
     alt="Whizzy Logo" 
   />
-</div>
+</div> */}
+<div>
 
+
+    <img
+          src="https://res.cloudinary.com/ds7rnlyst/image/upload/v1768556605/image0_z38z6t.jpg"
+          alt="Whizzy Logo"
+          className="w-20 p-2  shadow-lg shadow-black/45"
+        />
+</div>
         {/* Brand Name (Hidden on very small screens to save space) */}
         <h1 className="hidden sm:block text-2xl font-bold tracking-wide text-white">
           Whizzy
